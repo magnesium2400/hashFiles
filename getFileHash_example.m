@@ -1,12 +1,16 @@
-% `getFileHash` is a function that computes the MD5sum (hash) of files: 
-% - if it is called without argument, it calculates the hash of the script
+%% GETFILEHASH_EXAMPLE Examples of `getFileHash` usage
+% `getFileHash` is a function that computes the MD5sum (hash) of files:
+% 
+% * if it is called without argument, it calculates the hash of the script
 % that called it;
-% - alternatively, a filepath to an m file can be provided as input.
+% * alternatively, a filepath to an m file can be provided as input.
 %
 % This script provides some examples of its use. For best results, run this
 % script by calling `getFileHash_example` in the command window or by
 % selectin `Run` in the `Editor` tab (not by using Ctrl+Enter or F9)
+
 fprintf('\n\n');
+
 
 %% If called in a script, `getFileHash` returns the hash of that script
 % The following are equivalent in this case:
@@ -66,4 +70,5 @@ getFileHash('getFileHash_example', 'saveDependencies', true, 'codeOnly', true);
 
 getFileHash('getFileHash_example.m', 'saveDependencies', true, 'codeOnly', false, ...
     'data', {'getBinaryHash.m', 'getCode.m'});
+
 
